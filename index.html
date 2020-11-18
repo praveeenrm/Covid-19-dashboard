@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script defer src="./app.js"></script>
+    <script defer src="all_country_case.js"></script>
+    
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div>
+        <form class="nav-container">
+            <div>
+               <label>Country:</label> 
+               <input type="text" value="india" class="country-get" placeholder="Country Name" required>
+               
+            </div>
+            <div>
+                <label>From:</label> 
+                <input type="date" class="from-get" required>
+             </div>
+             <div>
+                <label>To:</label> 
+                <input type="date" class="to-get" required>
+             </div>
+             <div>
+                 <button type="submit" class="go-btn">Go</button>
+             </div>
+
+        </form>
+    </div>    
+
+    <div class="container">
+        <div class="left">
+            <div class="content">
+                <h1>COVID-19 Tracker</h1>
+                <p >Total confirmed cases</p>
+                <h2 id="confirm"></h2>
+                <table>
+                    <tr>
+                        <td><div class="circle orange"></div></td>
+                        <td>Active Cases</td>
+                        <td id="active"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><div class="circle green"></div></td>
+                        <td>Recovered Cases</td>
+                        <td id="recovered"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><div class="circle red"></div></td>
+                        <td>Dead Cases</td>
+                        <td id="dead"></td>
+                    </tr>
+                    
+                </table>
+            </div>
+            <hr>
+            <div class="countries">
+                <h1>All Countries</h1>
+                <div class="screen">
+                    <!-- <div class="box">
+                        <h4>China</h4>
+                        <p>80,788</p>
+                    </div> -->
+
+                </div>
+                
+            </div>
+        </div>
+
+
+        <!-- Right -->
+        <div class="right">
+            <div class="links">
+                <h3 id="reload">Reload</h3>
+            </div>
+
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    
+</body>
+</html>
